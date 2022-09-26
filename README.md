@@ -8,4 +8,4 @@ Reproduction steps:
 5. Kill the process from the task manager/PS, it shows up as "Form1"
 6. Comment out the `<MudThemProvider />` in `App.razor` and repeat steps 1-4. The process should not be found under step 4
 
-Something in the theme provider is causing the app to not shut down correctly.
+Something in the theme provider is causing the app to not shut down correctly. This line seems to the culprit: https://github.com/MudBlazor/MudBlazor/blob/dev/src/MudBlazor/Components/Popover/MudPopoverService.cs#L200
